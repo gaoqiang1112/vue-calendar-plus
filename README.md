@@ -2,6 +2,7 @@
 
 > vue-calendar with swiper
 
+![效果图](AAAhttps://github.com/gaoqiang1112/vue-calendar-plus/blob/master/src/assets/1527147468876.jpg)
 
 项目介绍
 
