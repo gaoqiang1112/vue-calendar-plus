@@ -253,9 +253,6 @@
                 </div>
                 <div class="year" @click.stop="changeYear">{{year}}年</div>
             </div>
-            <div>
-              <button @click="setToday">查看当月</button>
-            </div>
             <div style="display: flex;justify-content: space-around;line-height: 40px;height: 30px;width: 100px;">
                 <span class="calendar-prev swiper-button-prev"  :style=" 'visibility:'+prevBtnIsHid">
                     <svg width="20" height="20" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -421,7 +418,8 @@ export default {
             rangeBegin:[],
             rangeEnd:[],
             prevBtnIsHid:'hidden',
-            nextBtnIsHid:'visible'
+            nextBtnIsHid:'visible',
+            swiperOwn:''
         }
     },
     watch:{
@@ -439,7 +437,7 @@ export default {
     methods: {
         initSwiper(){
             let that = this;
-            var mySwiper = new Swiper('.swiper-container', {
+            let mySwiper = new Swiper('.swiper-container', {
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -471,6 +469,7 @@ export default {
                     },
                 },
             });
+            that.swiperOwn=mySwiper;
         },
         init(){
             let now = new Date();
@@ -751,6 +750,7 @@ export default {
         },
         // 返回今天
         setToday(){
+            this.swiperOwn.slideTo(0);
             let now = new Date();
             this.year = now.getFullYear()
             this.month = now.getMonth()

@@ -1,5 +1,8 @@
 <template>
     <div>
+      <div>
+        <button @click="lookThisMonth">查看当月</button>
+      </div>
         <div>
             <calendar
                     ref="calendar1"
@@ -61,6 +64,9 @@
             }
         },
         methods: {
+          lookThisMonth(){
+            this.$refs.calendar1.setToday()
+          }
         },
         created(){
 
