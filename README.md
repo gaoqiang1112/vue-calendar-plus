@@ -4,6 +4,8 @@
 
 ![效果图](https://github.com/gaoqiang1112/vue-calendar-plus/blob/master/src/assets/1527147468876.jpg)
 
+
+
 项目介绍
 
 1.项目是再vue-calendar基础上进行改进，添加swiper，进行整合后，可实现滑动轮播，或者点击翻页按钮进行轮播切换
@@ -32,7 +34,9 @@
 
 3.项目是在vue-calendar基础上进行二次调整，尊重原创，感谢原创的代码分享，原创github地址 https://github.com/jinzhe/vue-calendar
 
-4.欢迎star
+
+
+注意，此项目使用了swiper4，引用地址我以cdn方式引入，路径配置在了index.html里，如果你使用时，千万不要忘记
 
 
 ## Build Setup
